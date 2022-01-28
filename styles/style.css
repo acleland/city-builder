@@ -66,7 +66,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -87,6 +87,11 @@ p {
     flex-direction: row;
     justify-content: space-between;
     
+}
+
+.select img {
+    width: 200px;
+
 }
   
 footer {
