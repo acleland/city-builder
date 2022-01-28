@@ -61,6 +61,9 @@ header {
     box-shadow: var(--shadow);
 }
 
+h1 {
+    font-size: 2rem;
+}
 
 h2 {
     font-size: 1.8rem;
@@ -77,6 +80,13 @@ header img {
 
 p {
     margin: var(--gutter);
+}
+
+.menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
 }
   
 footer {
