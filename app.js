@@ -28,7 +28,7 @@ architectureSelect.addEventListener('change', () => {
 
 // if user presses enter key trigger button press
 sloganInput.addEventListener('keyup', (e) => {
-    if (e.keyCode ===13) {
+    if (e.key === 'Enter') {
         e.preventDefault();
         sloganButton.click();
     }  
