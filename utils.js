@@ -1,5 +1,5 @@
-export function makeStatsString(climateCount, landscapeCount, architectureCount) {
-    return `You changed the climate ${climateCount} ${timesOrTime(climateCount)}, the landscape ${landscapeCount} ${timesOrTime(landscapeCount)}, and the architecture ${architectureCount} ${timesOrTime(architectureCount)}`;
+export function createCountString(type, count) {
+    return `${type} modified ${count} ${timesOrTime(count)}`;
 }
 
 function timesOrTime(count) {

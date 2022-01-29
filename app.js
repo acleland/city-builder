@@ -54,7 +54,7 @@ sloganButton.addEventListener('click', () => {
     slogans.push(slogan);
     // clear out the form input's value so it's empty to the user
     sloganInput.value = '';
-    // update the dom to show the new slogans (refactor to/call displayslogans to do this work)
+    // update the dom to show the new slogans (refactor to/call display slogans to do this work)
     displaySlogans();
 
 });
