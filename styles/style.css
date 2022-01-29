@@ -82,9 +82,9 @@ header img {
     margin: var(--gutter);
 } */
 
-#statDisplay {
+/* #statDisplay {
     display: none;
-}
+} */
 
 .menus {
     display: flex;

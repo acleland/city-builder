@@ -5,15 +5,12 @@ const climateSelect = document.getElementById('climate-selector');
 const landscapeSelect = document.getElementById('landscape-selector');
 const landscapeImg = document.getElementById('landscapeImg');
 const architectureSelect = document.getElementById('architecture-selector');
-const climateDiv = document.getElementById('climate');
 const climateImg = document.getElementById('climateImg');
-const architectureDiv = document.getElementById('architecture');
 const architectureImg = document.getElementById('architectureImg');
 const sloganInput = document.getElementById('sloganInput');
 const sloganButton = document.getElementById('sloganButton');
 const sloganList = document.getElementById('sloganList');
-const statDisplay = document.getElementById('');
-
+const statDisplay = document.getElementById('statDisplay');
 
 // let state
 let climateCount = 0;
@@ -27,16 +24,19 @@ let slogans = [];
 climateSelect.addEventListener('change', () => {
     climateImg.src = `./assets/climate-${climateSelect.value}.jpeg`;
     climateCount++;
+    displayStats();
 });
 
 landscapeSelect.addEventListener('change', () => {
     landscapeImg.src = `./assets/landscape-${landscapeSelect.value}.jpeg`;
     landscapeCount++;
+    displayStats();
 });
 
 architectureSelect.addEventListener('change', () => {
     architectureImg.src = `./assets/architecture-${architectureSelect.value}.jpeg`;
     architectureCount++;
+    displayStats();
 });
 
 // if user presses enter key trigger button press
@@ -44,7 +44,7 @@ sloganInput.addEventListener('keyup', (e) => {
     if (e.key === 'Enter') {
         e.preventDefault();
         sloganButton.click();
-    }  
+    } 
 });
 
 sloganButton.addEventListener('click', () => {
@@ -62,7 +62,7 @@ sloganButton.addEventListener('click', () => {
 
 
 function displayStats() {
-    
+    statDisplay.innerText = makeStatsString(climateCount, landscapeCount, architectureCount);
 }
 
 function displaySlogans() {
