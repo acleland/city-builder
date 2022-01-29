@@ -1,5 +1,8 @@
 // import functions and grab DOM elements
+import { makeStatsString } from "./utils";
+
 const climateSelect = document.getElementById('climate-selector');
+const landscapeSelect = document.getElementById('landscape-selector');
 const architectureSelect = document.getElementById('architecture-selector');
 const climateDiv = document.getElementById('climate');
 const climateImg = document.getElementById('climateImg');
@@ -12,13 +15,21 @@ const sloganList = document.getElementById('sloganList');
 
 // let state
 let climateCount = 0;
+let landscapeCount = 0;
 let architectureCount = 0;
 let slogans = [];
+
+
 // set event listeners 
 
 climateSelect.addEventListener('change', () => {
     climateImg.src = `./assets/climate-${climateSelect.value}.jpeg`;
     climateCount++;
+});
+
+landscapeSelect.addEventListener('change', () => {
+    landscapeImg.src = `./assets/landscape-${landscapeSelect.value}.jpeg`;
+    landscapeCount++;
 });
 
 architectureSelect.addEventListener('change', () => {
@@ -32,12 +43,11 @@ sloganInput.addEventListener('keyup', (e) => {
         e.preventDefault();
         sloganButton.click();
     }  
-})
+});
 
 sloganButton.addEventListener('click', () => {
     // get the value of the slogan input
     const slogan = sloganInput.value;
-    console.log(slogan);
     // push the new slogan to the slogan array in state
     slogans.push(slogan);
     // clear out the form input's value so it's empty to the user
@@ -50,7 +60,7 @@ sloganButton.addEventListener('click', () => {
 
 
 function displayStats() {
-
+    
 }
 
 function displaySlogans() {
