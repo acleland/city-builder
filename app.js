@@ -67,7 +67,6 @@ function displayStats() {
 
 function displaySlogans() {
     // clear out the DOM for the currently displayed catchphrases
-    console.log(slogans);
     sloganList.innerHTML = '';
     sloganList.classList.add('catchphrase');
     // loop through each slogan in state
