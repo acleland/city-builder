@@ -3,6 +3,7 @@ import { makeStatsString } from './utils.js';
 
 const climateSelect = document.getElementById('climate-selector');
 const landscapeSelect = document.getElementById('landscape-selector');
+const landscapeImg = document.getElementById('landscapeImg');
 const architectureSelect = document.getElementById('architecture-selector');
 const climateDiv = document.getElementById('climate');
 const climateImg = document.getElementById('climateImg');
@@ -11,7 +12,7 @@ const architectureImg = document.getElementById('architectureImg');
 const sloganInput = document.getElementById('sloganInput');
 const sloganButton = document.getElementById('sloganButton');
 const sloganList = document.getElementById('sloganList');
-const statDisplay = document.getElementById('')
+const statDisplay = document.getElementById('');
 
 
 // let state
