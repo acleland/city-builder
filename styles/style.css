@@ -78,8 +78,12 @@ header img {
     height: var(--header-height);
 }
 
-p {
+/* p {
     margin: var(--gutter);
+} */
+
+#statDisplay {
+    display: none;
 }
 
 .menus {
