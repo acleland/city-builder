@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { makeStatsString } from "./utils";
+import { makeStatsString } from './utils.js';
 
 const climateSelect = document.getElementById('climate-selector');
 const landscapeSelect = document.getElementById('landscape-selector');
@@ -11,6 +11,7 @@ const architectureImg = document.getElementById('architectureImg');
 const sloganInput = document.getElementById('sloganInput');
 const sloganButton = document.getElementById('sloganButton');
 const sloganList = document.getElementById('sloganList');
+const statDisplay = document.getElementById('')
 
 
 // let state
