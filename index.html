@@ -18,7 +18,7 @@
             <h1 id="title">Blissful City Creator</h1>
             <div class="menus">
                 <div class="select" id="climate">
-                    <!-- <label for="climate-selector">Climate:</label> -->
+                    <label class="selectLabel" for="climate-selector">Climate:</label>
                     <select name="climate-selector" id="climate-selector" class="select">
                         <!-- <option value="">Select a climate:</option> -->
                         <option value="1">Temperate</option>
@@ -27,8 +27,10 @@
                         <option value="4">Tropical</option>
                     </select>
                     <img id="climateImg" src="./assets/climate-1.jpeg" alt="">
+                    <div id="climateStatDisplay" class="statDisplay"></div>
                 </div>
                 <div class="select" id="landscape">
+                    <label class="selectLabel" for="landscape-selector">Landscape:</label>
                     <select name="landscape-selector" id="landscape-selector" class="select">
                         <!-- <option value="">Select an landscape:</option> -->
                         <option value="1">Mountains</option>
@@ -37,9 +39,11 @@
                         <option value="4">Valley</option>
                     </select>
                     <img id="landscapeImg" src="./assets/landscape-1.jpeg" alt="">
+                    <div id="landscapeStatDisplay" class="statDisplay"></div>
                 </div>
-                <!-- <label for="architecture-selector">Architecture:</label> -->
+                
                 <div class="select" id="architecture">
+                    <label class="selectLabel" for="architecture-selector">Architecture:</label>
                     <select name="architecture-selector" id="architecture-selector" class="select">
                         <!-- <option value="">Select an architecture:</option> -->
                         <option value="1">Modern</option>
@@ -48,19 +52,15 @@
                         <option value="4">Beaux-Arts</option>
                     </select>
                     <img id="architectureImg" src="./assets/architecture-1.jpeg" alt="">
-                    <div id="climateStatDisplay" class="statDisplay">
-
-                    </div>
+                    <div id="architectureStatDisplay" class="statDisplay"></div>
                 </div> 
             </div>
-    
-            <p id="statDisplay"></p>
             
             <div id="slogans">
                 <div id="sloganHeading">
                     <h2>City Slogans</h2>
                     <input id="sloganInput" type="text">
-                    <button id="sloganButton">Add</button>
+                    <button id="sloganButton">Add a slogan</button>
                 </div>
                 <ul id="sloganList"></ul>
 

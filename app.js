@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { makeStatsString } from './utils.js';
+import { createCountString } from './utils.js';
 
 const climateSelect = document.getElementById('climate-selector');
 const landscapeSelect = document.getElementById('landscape-selector');
@@ -10,12 +10,17 @@ const architectureImg = document.getElementById('architectureImg');
 const sloganInput = document.getElementById('sloganInput');
 const sloganButton = document.getElementById('sloganButton');
 const sloganList = document.getElementById('sloganList');
-const statDisplay = document.getElementById('statDisplay');
 
 // let state
-let climateCount = 0;
-let landscapeCount = 0;
-let architectureCount = 0;
+let counts = {
+    'climate': 0,
+    'landscape': 0,
+    'architecture': 0
+};
+
+// let climateCount = 0;
+// let landscapeCount = 0;
+// let architectureCount = 0;
 let slogans = [];
 
 
@@ -23,20 +28,20 @@ let slogans = [];
 
 climateSelect.addEventListener('change', () => {
     climateImg.src = `./assets/climate-${climateSelect.value}.jpeg`;
-    climateCount++;
-    displayStats();
+    counts.climate++;
+    displayStats('climate');
 });
 
 landscapeSelect.addEventListener('change', () => {
     landscapeImg.src = `./assets/landscape-${landscapeSelect.value}.jpeg`;
-    landscapeCount++;
-    displayStats();
+    counts.landscape++;
+    displayStats('landscape');
 });
 
 architectureSelect.addEventListener('change', () => {
     architectureImg.src = `./assets/architecture-${architectureSelect.value}.jpeg`;
-    architectureCount++;
-    displayStats();
+    counts.architecture++;
+    displayStats('architecture');
 });
 
 // if user presses enter key trigger button press
@@ -59,10 +64,10 @@ sloganButton.addEventListener('click', () => {
 
 });
 
-
-
-function displayStats() {
-    statDisplay.innerText = makeStatsString(climateCount, landscapeCount, architectureCount);
+// Display functions
+function displayStats(type) {
+    const statDisplay = document.getElementById(`${type}StatDisplay`);
+    statDisplay.innerText = createCountString(type, counts[type]);
 }
 
 function displaySlogans() {
