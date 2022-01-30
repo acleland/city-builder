@@ -10,6 +10,8 @@ const architectureImg = document.getElementById('architectureImg');
 const sloganInput = document.getElementById('sloganInput');
 const sloganButton = document.getElementById('sloganButton');
 const sloganList = document.getElementById('sloganList');
+const cityNameInput = document.getElementById('cityNameInput');
+const cityName = document.getElementById('cityName');
 
 // let state
 let counts = {
@@ -25,6 +27,13 @@ let slogans = [];
 
 
 // set event listeners 
+
+cityNameInput.addEventListener('input', () => {
+    cityName.innerText = cityNameInput.value;
+    if (cityNameInput.value === '') {
+        cityName.innerText = 'My City';
+    }
+});
 
 climateSelect.addEventListener('change', () => {
     climateImg.src = `./assets/climate-${climateSelect.value}.jpeg`;
