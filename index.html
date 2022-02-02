@@ -6,65 +6,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/reset.css">
+    <!-- <link rel="stylesheet" href="./styles/reset.css"> -->
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./styles/home.css">
-    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./styles/home.css"> -->
+    <title>Blissful City Creator</title>
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
-    </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
+            <h1 id="title">Blissful City Creator</h1>
+            <div id="cityNameInputContainer">
+                <label for="cityNameInput">Enter City Name</label>
+                <input id="cityNameInput" type="text" placeholder="My City:">
+            </div>
+            <h2 id="cityName">My City</h2>
+            <div class="menus">
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
+                <div class="select" id="climate">
+                    <label class="selectLabel" for="climate-selector">Climate:</label>
+                    <select name="climate-selector" id="climate-selector" class="select">
+                        <!-- <option value="">Select a climate:</option> -->
+                        <option value="1">Temperate</option>
+                        <option value="2">Polar</option>
+                        <option value="3">Desert</option>
+                        <option value="4">Tropical</option>
+                    </select>
+                    <div class="imageContainer">
+                        <img class="selectImage" id="climateImg" src="./assets/climate-1.jpeg" alt="">
+                    </div>
+                    <div id="climateStatDisplay" class="statDisplay"></div>
+                </div>
+                <div class="select" id="landscape">
+                    <label class="selectLabel" for="landscape-selector">Landscape:</label>
+                    <select name="landscape-selector" id="landscape-selector" class="select">
+                        <!-- <option value="">Select an landscape:</option> -->
+                        <option value="1">Mountains</option>
+                        <option value="2">Coastal</option>
+                        <option value="3">Flatland</option>
+                        <option value="4">Valley</option>
+                    </select>
+                    <div class="imageContainer">
+                        <img class="selectImage" id="landscapeImg" src="./assets/landscape-1.jpeg" alt="">
+                    </div>
+                    <div id="landscapeStatDisplay" class="statDisplay"></div>
+                </div>
+                
+                <div class="select" id="architecture">
+                    <label class="selectLabel" for="architecture-selector">Architecture:</label>
+                    <select name="architecture-selector" id="architecture-selector" class="select">
+                        <!-- <option value="">Select an architecture:</option> -->
+                        <option value="1">Modern</option>
+                        <option value="2">Gothic</option>
+                        <option value="3">Art Deco</option>
+                        <option value="4">Beaux-Arts</option>
+                    </select>
+                    <div class="imageContainer">
+                        <img class="selectImage" id="architectureImg" src="./assets/architecture-1.jpeg" alt="">
+                    </div>
+                    <div id="architectureStatDisplay" class="statDisplay"></div>
+                </div> 
+            </div>
+            
+            <div id="slogans">
+                <div id="sloganHeading">
+                    <h2>City Slogans</h2>
+                    <input id="sloganInput" type="text">
+                    <button id="sloganButton">Add a slogan</button>
+                </div>
+                <ul id="sloganList"></ul>
 
+            </div>
         </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+        <div class="copy gutter-right">&copy; 2022 Andrea Cleland</div>
     </footer>
 
     <script type="module" src="./app.js"></script>
